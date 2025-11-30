@@ -38,7 +38,7 @@ if os.path.exists(corruptedPath): os.remove(corruptedPath)
 # Recover to SQL commands and insert back into a database
 print("Recovering database.")
 subprocess.run(["sqlite3", inputPath, ".recover --ignore-freelist"], check=True, stdout=open(sqlPath, 'w'))
-f = open(sqlPath,'r')
+f = open(sqlPath,'r', encoding='utf-8', errors='ignore')
 filedata = f.read()
 f.close()
 f = open(sqlPath,'w')
