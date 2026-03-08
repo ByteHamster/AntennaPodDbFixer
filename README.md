@@ -9,5 +9,9 @@ If AntennaPod detects a broken database, it dumps the broken database to the fil
 
 This script automates the recovery process, so one does not need to go through [the steps](https://antennapod.org/documentation/bugs-first-aid/database-error) manually.
 
+### Requirements
+- Python 3
+- SQLite 3.40.0 or higher
+
 ### License
 This script is licensed under the GNU General Public License (GPL-3.0). You can find the license text in the LICENSE file.
