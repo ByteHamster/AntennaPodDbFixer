@@ -12,5 +12,6 @@ This script automates the recovery process, so one does not need to go through [
 ### Requirements
 - Python 3
 - SQLite 3.40.0 or higher
+
 ### License
 This script is licensed under the GNU General Public License (GPL-3.0). You can find the license text in the LICENSE file.
