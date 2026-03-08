@@ -1,5 +1,10 @@
 # AntennaPod Db Fixer 
 
+### Requirements
+
+- Python 3
+- SQLite **3.40.0 or higher** (the script checks this at startup and exits with a clear error if the requirement is not met)
+
 There are two situations in which the AntennaPod database might get broken:
 
 - In a very old AntennaPod version, there were some issues with the database with all information (episodes, listening states, etc). While the cause is long fixed, your database might have been damaged (even when the app was working without issues). If a recent AntennaPod version makes changes to the damaged parts of the database, these damages may suddenly become a problem.

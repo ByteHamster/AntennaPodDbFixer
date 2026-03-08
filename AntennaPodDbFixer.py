@@ -5,6 +5,11 @@ import shutil
 import os
 import sys
 
+# Requires SQLite >= 3.40.0. See: https://sqlite.org/src/info/afce8443ace57c3c
+_sqlite_version = subprocess.run(["sqlite3", ":memory:", "SELECT sqlite_version();"], capture_output=True, text=True).stdout.strip()
+if tuple(int(x) for x in _sqlite_version.split(".")) < (3, 40, 0):
+    print("Error: SQLite >= 3.40.0 required, but " + _sqlite_version + " was detected. Please update your SQLite."); sys.exit(1)
+
 if len(sys.argv) > 1:
     inputPath = sys.argv[1]
 else:
