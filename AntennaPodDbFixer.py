@@ -46,7 +46,7 @@ subprocess.run(["sqlite3", inputPath, ".recover --ignore-freelist"], check=True,
 f = open(sqlPath,'r', encoding='utf-8', errors='ignore')
 filedata = f.read()
 f.close()
-f = open(sqlPath,'w')
+f = open(sqlPath,'w', encoding='utf-8')
 f.write(filedata.replace("CREATE TABLE sqlite_sequence(name,seq);","")) # Avoid a warning that could be confusing to users
 f.close()
 subprocess.run(["sqlite3", corruptedPath], stdin=open(sqlPath, 'r'))
